@@ -275,6 +275,7 @@
             button22.Name = "button22";
             button22.Size = new Size(94, 29);
             button22.TabIndex = 18;
+            button22.Text = "√";
             button22.UseVisualStyleBackColor = true;
             button22.Click += button22_Click;
             // 
