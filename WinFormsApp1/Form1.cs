@@ -8,17 +8,18 @@ namespace WinFormsApp1
         public string D;
         public string N1;
         public bool n2;
-
         public Form1()
         {
             n2 = false;
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Привет, я помогу быстро посчитать нужные тебе примеры!");
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,10 +70,10 @@ namespace WinFormsApp1
             if (D == "/")
 
             {
-                if (dn2 ==0)
+                if (dn2 == 0)
                 {
-                    MessageBox.Show("На ноль делить нельзя");
-                }    
+                    MessageBox.Show("На ноль делить нельзя","Вход");
+                }
                 res = dn1 / dn2;
             }
             D = "=";
@@ -86,7 +87,17 @@ namespace WinFormsApp1
 
             dn = Convert.ToDouble(textBox1.Text);
             res = Math.Sqrt(dn);
-            textBox1.Text = res.ToString(); 
+            textBox1.Text = res.ToString();
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult res  = MessageBox.Show("Завершить работу программу?", "Выход", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            { e.Cancel = false; }
+            if (res == DialogResult.No)
+            { e.Cancel = true; }
 
         }
     }
