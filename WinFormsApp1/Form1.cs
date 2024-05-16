@@ -71,7 +71,7 @@ namespace WinFormsApp1
             {
                 if (dn2 ==0)
                 {
-                    MessageBox.Show("На ноль делить нельзя");
+                    MessageBox.Show("На ноль делить можно");
                 }    
                 res = dn1 / dn2;
             }
