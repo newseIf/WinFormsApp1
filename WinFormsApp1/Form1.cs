@@ -72,7 +72,7 @@ namespace WinFormsApp1
             {
                 if (dn2 == 0)
                 {
-                    MessageBox.Show("На ноль делить нельзя");
+                    MessageBox.Show("На ноль делить нельзя","Вход");
                 }
                 res = dn1 / dn2;
             }
@@ -93,7 +93,12 @@ namespace WinFormsApp1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            DialogResult res  = MessageBox.Show("Завершить работу программу?", "Выход", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            { e.Cancel = false; }
+            if (res == DialogResult.No)
+            { e.Cancel = true; }
+
         }
     }
 }
