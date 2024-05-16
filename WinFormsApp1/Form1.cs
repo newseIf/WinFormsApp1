@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using System.Net;
 
 namespace WinFormsApp1
 {
@@ -53,7 +54,7 @@ namespace WinFormsApp1
             res = 0;
             dn1 = Convert.ToDouble(N1);
             dn2 = Convert.ToDouble(textBox1.Text);
-            if(D=="+")
+            if (D == "+")
             {
                 res = dn1 + dn2;
             }
@@ -72,6 +73,16 @@ namespace WinFormsApp1
             D = "=";
             n2 = true;
             textBox1.Text = res.ToString();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            double dn, res;
+
+            dn = Convert.ToDouble(textBox1.Text);
+            res = Math.Sqrt(dn);
+            textBox1.Text = res.ToString(); 
+
         }
     }
 }
