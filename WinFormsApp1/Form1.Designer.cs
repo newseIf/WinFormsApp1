@@ -50,6 +50,7 @@
             button19 = new Button();
             button20 = new Button();
             button21 = new Button();
+            button22 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -268,11 +269,22 @@
             button21.UseVisualStyleBackColor = true;
             button21.Click += button11_Click;
             // 
+            // button22
+            // 
+            button22.Location = new Point(569, 135);
+            button22.Name = "button22";
+            button22.Size = new Size(94, 29);
+            button22.TabIndex = 18;
+            button22.Text = "√";
+            button22.UseVisualStyleBackColor = true;
+            button22.Click += button22_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button22);
             Controls.Add(button21);
             Controls.Add(button20);
             Controls.Add(button17);
@@ -327,5 +339,6 @@
         private Button button19;
         private Button button20;
         private Button button21;
+        private Button button22;
     }
 }
