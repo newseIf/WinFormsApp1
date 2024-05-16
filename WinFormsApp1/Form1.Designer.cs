@@ -309,6 +309,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             Click += button11_Click;
             ResumeLayout(false);
